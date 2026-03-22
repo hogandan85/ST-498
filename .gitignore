@@ -2,3 +2,5 @@ Code/API_key.txt
 .DS_Store
 *.csv
 Data/MacroVariables.csv
+*.pyc
+*.png
