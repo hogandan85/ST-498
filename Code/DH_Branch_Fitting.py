@@ -5,6 +5,7 @@ from scipy.special import inv_boxcox
 from sklearn.preprocessing import PowerTransformer
 from pmdarima import auto_arima
 import warnings
+from pmdarima import ARIMA
 warnings.filterwarnings('ignore')
 
 
@@ -66,10 +67,22 @@ def extract_diagnostics(model) -> dict:
 #  FIT & COMPARE MODELS ACROSS TRANSFORMATIONS
 # ─────────────────────────────────────────────
 
-def fit_all_transformations(series: pd.Series, m: int = 4) -> pd.DataFrame:
-    """Fits auto_arima for each transformation, returns comparison DataFrame."""
+from sklearn.model_selection import TimeSeriesSplit
+
+def fit_all_transformations(series: pd.Series, m: int = 4, cv_folds: int = 5,
+                            cv_horizon: int = None) -> pd.DataFrame:
+    """Fits auto_arima for each transformation with time-series cross-validation."""
     transformations = apply_transformations(series)
     results = []
+
+    if cv_horizon is None:
+        cv_horizon = m
+
+    tscv = TimeSeriesSplit(
+        n_splits=cv_folds,
+        test_size=cv_horizon,
+        gap=0  # no gap between train/test; set >0 if you want a buffer
+    )
 
     for name, (transformed, inverse_fn) in transformations.items():
         try:
@@ -88,6 +101,36 @@ def fit_all_transformations(series: pd.Series, m: int = 4) -> pd.DataFrame:
                 stepwise=True
             )
 
+            # --- Cross-validation via sklearn TimeSeriesSplit ---
+            cv_maes, cv_rmses = [], []
+
+            for train_idx, test_idx in tscv.split(transformed):
+                if len(train_idx) < 2 * m:
+                    continue  # skip folds without enough seasonal history
+
+                train_fold = transformed.iloc[train_idx]
+                test_fold = transformed.iloc[test_idx]
+
+                try:
+                    fold_model = ARIMA(
+                        order=model.order,
+                        seasonal_order=model.seasonal_order,
+                        suppress_warnings=True
+                    )
+                    fold_model.fit(train_fold)
+                    preds = fold_model.predict(n_periods=len(test_fold))
+
+                    errors = test_fold.values - preds
+                    cv_maes.append(np.mean(np.abs(errors)))
+                    cv_rmses.append(np.sqrt(np.mean(errors ** 2)))
+                except Exception:
+                    continue
+
+            cv_mae = np.mean(cv_maes) if cv_maes else np.nan
+            cv_rmse = np.mean(cv_rmses) if cv_rmses else np.nan
+            cv_folds_used = len(cv_maes)
+
+            # --- Diagnostics ---
             residuals = pd.Series(model.resid())
             diagnostics = extract_diagnostics(model)
 
@@ -95,14 +138,17 @@ def fit_all_transformations(series: pd.Series, m: int = 4) -> pd.DataFrame:
                 'transformation':   name,
                 'aic':              model.aic(),
                 'bic':              model.bic(),
+                'cv_rmse':          cv_rmse,
+                'cv_mae':           cv_mae,
+                'cv_folds_used':    cv_folds_used,
                 'order':            model.order,
                 'seasonal_order':   model.seasonal_order,
                 'residual_std':     residuals.std(),
                 'abs_skew':         abs(residuals.skew()),
                 'abs_kurt':         abs(residuals.kurtosis() - 3),
-                'prob_q':           diagnostics['prob_q'],    # >0.05 = no autocorrelation (good)
-                'prob_jb':          diagnostics['prob_jb'],   # >0.05 = normal residuals (good)
-                'prob_h':           diagnostics['prob_h'],    # >0.05 = no heteroskedasticity (good)
+                'prob_q':           diagnostics['prob_q'],
+                'prob_jb':          diagnostics['prob_jb'],
+                'prob_h':           diagnostics['prob_h'],
                 'skew':             diagnostics['skew'],
                 'kurtosis':         diagnostics['kurtosis'],
                 '_model':           model,
@@ -113,7 +159,7 @@ def fit_all_transformations(series: pd.Series, m: int = 4) -> pd.DataFrame:
         except Exception as e:
             print(f"    ⚠ Failed [{name}]: {e}")
 
-    comparison_df = pd.DataFrame(results).sort_values('aic').reset_index(drop=True)
+    comparison_df = pd.DataFrame(results).sort_values('cv_rmse').reset_index(drop=True)
     return comparison_df
 
 
