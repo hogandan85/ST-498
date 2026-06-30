@@ -1,0 +1,13 @@
+Variable,Winner model,Validated,Lag ceiling
+us_credit_qoq_growth,XGBoost,No,8
+us_sp500_log_ret,Ridge,No,7
+us_vix_log_ret,SVR,No,2
+us_bond_yield_10y,LASSO,Yes,6
+us_oil_yoy,Elastic Net,Yes,8
+us_reer_diff,KRR,No,2
+us_gdp_yoy_growth,XGBoost,Yes,5
+us_cpi,Ridge,Yes,6
+us_unemployment,Random Forest,Yes,7
+us_consumer_confidence,XGBoost,No,8
+us_house_price_yoy,Ridge,Yes,7
+us_indprod_yoy,Random Forest,Yes,8
