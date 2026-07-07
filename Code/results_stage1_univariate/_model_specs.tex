@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\centering
+\caption{Stage 1 — Univariate model specifications (selection window <=2019Q4)}
+\label{tab:model_specs}
+\begin{tabular}{llllrrrr}
+\toprule
+variable & model & order & full\_order & AIC & BIC & sigma2 & LB\_p \\
+\midrule
+us\_house\_price\_idx & ARMA & (1,0,0) & (1,1,0) on log-levels & -869.2 & -863.7 & 3.76e-05 & 0.181 \\
+us\_consumer\_confidence & Mean & (0,0,0) & (0,1,0) & 213.9 & 219.5 & 0.342 & — \\
+us\_real\_gdp & ARMA & (2,0,0) & (2,1,0) on log-levels & -904.2 & -893.1 & 2.74e-05 & 0.934 \\
+us\_gdp\_yoy\_growth & ARMA & (1,0,0) & (1,1,0) & 271.9 & 277.5 & 0.556 & 0.001 \\
+us\_bond\_yield\_10y & ARMA & (2,0,2) & (2,1,2) & 150.7 & 164.6 & 0.188 & 0.572 \\
+us\_bond\_yield\_1y & ARMA & (0,0,3) & (0,1,3) & 154.8 & 165.9 & 0.2 & 0.967 \\
+us\_term\_spread & Mean & (0,0,0) & (0,0,0) & 356.9 & 362.4 & 1.11 & — \\
+us\_reer & AR & (1,0,0) & (1,1,0) on log-levels & -460.5 & -452.6 & 0.000604 & 0.882 \\
+us\_reer\_log\_ret & AR & (1,0,0) & (1,0,0) & -460.5 & -452.6 & 0.000604 & 0.882 \\
+us\_oil\_price & ARMA & (0,0,2) & (0,1,2) on log-levels & -58.0 & -49.7 & 0.0341 & 0.923 \\
+us\_oil\_log\_ret & ARMA & (0,0,2) & (0,0,2) & -59.2 & -50.8 & 0.034 & 0.919 \\
+us\_credit & Mean & (0,0,0) & (0,2,0) on log-levels & -895.9 & -890.3 & 2.85e-05 & — \\
+us\_credit\_qoq\_growth & Mean & (0,0,0) & (0,1,0) & 194.9 & 200.4 & 0.291 & — \\
+us\_credit\_yoy\_growth & Mean & (0,0,0) & (0,1,0) & 259.4 & 265.0 & 0.501 & — \\
+us\_industrial\_production & ARMA & (2,0,0) & (2,1,0) on log-levels & -708.1 & -697.0 & 0.000142 & 0.718 \\
+us\_vix & Mean & (0,0,0) & (0,0,0) & 819.9 & 825.4 & 52.5 & — \\
+us\_vix\_log\_ret & AR & (2,0,0) & (2,0,0) & 14.7 & 25.8 & 0.062 & 0.940 \\
+us\_delinquency\_rate & ARMA & (1,0,0) & (1,1,0) & -58.2 & -52.7 & 0.034 & 0.166 \\
+us\_cpi & AR & (4,0,0) & (4,1,0) & 260.0 & 276.4 & 0.506 & 0.003 \\
+us\_unemployment & ARMA & (1,0,3) & (1,1,3) & 7.0 & 20.9 & 0.056 & 0.166 \\
+us\_sp500\_close & AR & (2,0,0) & (2,1,0) on log-levels & -264.9 & -253.9 & 0.00568 & 0.894 \\
+us\_sp500\_log\_ret & AR & (1,0,0) & (1,0,0) & -267.8 & -259.5 & 0.00586 & 0.875 \\
+\bottomrule
+\end{tabular}
+\end{table}
