@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering
+\caption{Stage 1 — Forward (production) model specifications (full-sample refit)}
+\label{tab:model_specs}
+\begin{tabular}{llllrrrr}
+\toprule
+variable & model & order & full\_order & AIC & BIC & sigma2 & LB\_p \\
+\midrule
+us\_real\_gdp & Mean & (0,0,0) & (0,1,0) on log-levels & -878.7 & -872.7 & 0.000122 & — \\
+us\_unemployment & ARMA & (0,0,0) & (0,1,0) & 305.3 & 308.2 & 0.488 & 0.987 \\
+us\_cpi & Mean & (0,0,0) & (0,1,0) & 379.6 & 385.5 & 0.809 & — \\
+us\_consumer\_confidence & SARMA & (3,0,2)(0,0,1){[}4{]} & (3,1,2)(0,0,1){[}4{]} & 190.0 & 213.7 & 0.193 & 0.959 \\
+us\_bond\_yield\_10y & Mean & (0,0,0) & (0,1,0) & 183.5 & 189.5 & 0.205 & — \\
+us\_credit & ARMA & (0,0,2) & (0,2,2) on log-levels & -1093.1 & -1084.2 & 2.54e-05 & 0.168 \\
+us\_sp500\_close & Mean & (0,0,0) & (0,1,0) on log-levels & -315.2 & -309.3 & 0.00628 & — \\
+us\_vix & AR & (4,0,0) & (4,0,0) & 925.4 & 943.1 & 39.9 & 0.866 \\
+us\_house\_price\_idx & AR & (1,0,0) & (1,1,0) on log-levels & -1016.2 & -1007.3 & 4.38e-05 & 0.050 \\
+us\_industrial\_production & SARMA & (1,0,0) & (1,1,0) on log-levels & -806.2 & -797.3 & 0.0002 & 0.634 \\
+us\_oil\_price & Mean & (0,0,0) & (0,1,0) on log-levels & -32.0 & -26.1 & 0.0455 & — \\
+us\_reer & ARMA & (0,0,0) & (0,1,0) on log-levels & -575.3 & -572.5 & 0.000621 & 0.904 \\
+\bottomrule
+\end{tabular}
+\end{table}
