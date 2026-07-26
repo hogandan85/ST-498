@@ -1,0 +1,13 @@
+Variable,Winner,Model,RMSE (primary),Validated,Reason
+us_bond_yield_10y,ML_univariate,LASSO,1.5064,Yes,only ML validated
+us_consumer_confidence,TS_univariate,AR,0.6148,No,lower RMSE
+us_cpi,ML_univariate,KRR,2.7219,Yes,only ML validated
+us_credit_qoq_growth,ML_univariate,XGBoost,0.6246,No,lower RMSE
+us_gdp_yoy_growth,ML_univariate,XGBoost,0.4052,Yes,lower RMSE
+us_house_price_yoy,ML_univariate,Ridge,1.8698,Yes,only ML validated
+us_indprod_yoy,TS_univariate,SARMA,0.8817,No,lower RMSE
+us_oil_yoy,ML_univariate,Elastic Net,23.5219,Yes,only ML validated
+us_reer_diff,ML_univariate,KRR,2.7898,No,lower RMSE
+us_sp500_log_ret,ML_univariate,Ridge,0.0756,No,lower RMSE
+us_unemployment,TS_univariate,SARMA,0.2252,Yes,lower RMSE
+us_vix_log_ret,ML_univariate,SVR,0.2189,No,lower RMSE
