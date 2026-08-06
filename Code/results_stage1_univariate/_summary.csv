@@ -1,0 +1,23 @@
+variable,group,transform,n_train,n_test,cv_best,cv_best_order,test_best,test_best_order,test_best_full_order,beats_mean,RMSE_Mean,RMSE_AR,RMSE_ARMA,RMSE_SARMA
+us_house_price_idx,us_house_price_idx,dlog,119,16,AR,"(1,0,0)",ARMA,"(1,0,0)","(1,1,0) on log-levels",True,0.008879,0.008953,0.008826,0.008826
+us_consumer_confidence,us_consumer_confidence,diff,119,16,SARMA,"(0,0,2)(0,0,1)[4]",Mean,"(0,0,0)","(0,1,0)",False,0.369831,0.389459,0.370556,0.370556
+us_real_gdp,gdp,dlog,119,16,Mean,"(0,0,0)",ARMA,"(2,0,0)","(2,1,0) on log-levels",True,0.004185,0.00419,0.004184,0.004184
+us_gdp_yoy_growth,gdp,none+diff,119,16,SARMA,"(1,0,0)(2,0,0)[4]",ARMA,"(1,0,0)","(1,1,0)",True,0.748246,0.790697,0.746833,0.76171
+us_bond_yield_10y,us_bond_yield_10y,diff,119,16,Mean,"(0,0,0)",ARMA,"(2,0,2)","(2,1,2)",True,0.463187,0.462167,0.43338,0.438713
+us_bond_yield_1y,us_bond_yield_1y,diff,119,16,ARMA,"(0,0,3)",ARMA,"(0,0,3)","(0,1,3)",True,0.69992,0.693253,0.681703,0.68734
+us_term_spread,us_term_spread,none,120,16,SARMA,"(2,0,2)(1,0,0)[4]",Mean,"(0,0,0)","(0,0,0)",False,1.922217,2.008482,2.358466,2.352757
+us_reer,reer,dlog,103,16,ARMA,"(0,0,0)",AR,"(1,0,0)","(1,1,0) on log-levels",True,0.025643,0.025631,0.025756,0.025756
+us_reer_log_ret,reer,none,103,16,ARMA,"(0,0,0)",AR,"(1,0,0)","(1,0,0)",True,0.025643,0.025631,0.025756,0.025756
+us_oil_price,oil,dlog,119,16,Mean,"(0,0,0)",ARMA,"(0,0,2)","(0,1,2) on log-levels",True,0.155995,0.15575,0.154699,0.154699
+us_oil_log_ret,oil,none,120,16,Mean,"(0,0,0)",ARMA,"(0,0,2)","(0,0,2)",True,0.155883,0.155735,0.154699,0.154729
+us_credit,credit,dlog+diff,118,16,ARMA,"(1,0,0)",Mean,"(0,0,0)","(0,2,0) on log-levels",False,0.003712,0.003718,0.003722,0.004297
+us_credit_qoq_growth,credit,none+diff,119,16,SARMA,"(1,0,2)(2,0,1)[4]",Mean,"(0,0,0)","(0,1,0)",False,0.372899,0.375273,0.374166,0.408387
+us_credit_yoy_growth,credit,none+diff,119,16,Mean,"(0,0,0)",Mean,"(0,0,0)","(0,1,0)",False,0.757696,0.783533,0.795981,0.783368
+us_industrial_production,us_industrial_production,dlog,119,16,SARMA,"(2,0,0)(0,0,1)[4]",ARMA,"(2,0,0)","(2,1,0) on log-levels",True,0.008225,0.008194,0.008166,0.008228
+us_vix,vix,none,120,16,AR,"(4,0,0)",Mean,"(0,0,0)","(0,0,0)",False,5.412197,5.489717,5.501384,5.501384
+us_vix_log_ret,vix,none,119,16,Mean,"(0,0,0)",AR,"(2,0,0)","(2,0,0)",True,0.229786,0.229774,0.229882,0.229882
+us_delinquency_rate,us_delinquency_rate,diff,115,16,ARMA,"(1,0,0)",ARMA,"(1,0,0)","(1,1,0)",True,0.145705,0.148281,0.132511,0.147022
+us_cpi,us_cpi,none+diff,119,16,Mean,"(0,0,0)",AR,"(4,0,0)","(4,1,0)",True,0.909454,0.905955,0.913928,0.916713
+us_unemployment,us_unemployment,diff,119,16,ARMA,"(1,0,3)",ARMA,"(1,0,3)","(1,1,3)",True,0.12902,0.136148,0.125079,0.127086
+us_sp500_close,sp500,dlog,119,16,Mean,"(0,0,0)",AR,"(2,0,0)","(2,1,0) on log-levels",True,0.075338,0.075284,0.075338,0.075338
+us_sp500_log_ret,sp500,none,120,16,ARMA,"(0,0,0)",AR,"(1,0,0)","(1,0,0)",True,0.075363,0.075337,0.075363,0.075363

@@ -1,0 +1,13 @@
+Family,Variable,Model,RMSE (full),MAE (primary),RMSE (primary),sMAPE,R2_oos,LB_p,DM stat,DM pval,Stable,Validated
+TS_univariate,us_unemployment,SARMA,0.2252,0.1973,0.2252,5.063,0.7122,0.0005,2.6276,0.0086,Yes,Yes
+TS_univariate,us_cpi,SARMA,2.9632,1.9528,2.9632,45.02,0.0485,0.0006,1.9043,0.0569,Yes,No
+TS_univariate,us_consumer_confidence,AR,0.6148,0.4886,0.6148,0.491,-0.0069,0.233,-0.0201,0.9839,Yes,No
+TS_univariate,us_bond_yield_10y,RW,2.081,2.0006,2.081,68.323,0.0,0.1154,,,Yes,No
+TS_univariate,us_gdp_yoy_growth,AR,2.3566,1.6063,1.6738,94.035,0.6018,0.4933,6.9251,0.0,Yes,Yes
+TS_univariate,us_house_price_yoy,ARMA,11.5635,1.4628,1.9766,88.8,0.0739,0.0631,0.1178,0.9062,Yes,No
+TS_univariate,us_indprod_yoy,SARMA,0.8563,0.7288,0.8817,152.527,0.0302,0.4672,0.481,0.6305,Yes,No
+TS_univariate,us_oil_yoy,AR,33.0064,16.427,18.5005,195.052,0.0229,0.0942,0.792,0.4284,Yes,No
+TS_univariate,us_reer_diff,AR,2.9795,2.5334,2.9795,189.849,0.0107,0.906,0.6327,0.5269,Yes,No
+TS_univariate,us_credit_qoq_growth,SARMA,4.0035,1.2671,4.0035,48.309,0.1326,0.9992,1.3132,0.1891,Yes,No
+TS_univariate,us_sp500_log_ret,RW,0.1147,0.0867,0.1147,200.0,0.0,0.5503,,,Yes,No
+TS_univariate,us_vix_log_ret,ARMA,0.2413,0.2052,0.2413,191.564,0.044,0.1107,1.0327,0.3017,Yes,No

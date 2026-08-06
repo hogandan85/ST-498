@@ -1,0 +1,13 @@
+Variable,n,Naive,AR,ARMA,SARIMA,Best method,SARIMA=best?,SARIMA vs naive p
+us_real_gdp,75,0.0,10.4,21.8,12.4,ARMA,~,0.2419
+us_unemployment,75,0.0,20.1,17.0,22.1,SARIMA,Yes,0.1701
+us_cpi,75,0.0,1.9,-5.3,17.3,SARIMA,Yes,0.2659
+us_consumer_confidence,75,0.0,20.9,18.0,22.9,SARIMA,Yes,0.2289
+us_bond_yield_10y,75,0.0,0.0,0.0,0.0,Naive,~,0.734
+us_credit,75,0.0,-94.5,-7.8,-64.8,Naive,~,0.2903
+us_sp500_close,75,0.0,-34.8,-6.6,-0.0,Naive,~,0.2179
+us_vix,75,0.0,2.4,3.9,7.1,SARIMA,Yes,0.3046
+us_house_price_idx,75,0.0,-148.3,-148.3,-184.0,Naive,~,0.3242
+us_industrial_production,75,0.0,8.5,8.5,7.8,AR,~,0.4864
+us_oil_price,75,0.0,-9.9,-9.9,2.3,SARIMA,Yes,0.4704
+us_reer,59,0.0,-0.5,-0.5,-14.5,Naive,No,0.0334

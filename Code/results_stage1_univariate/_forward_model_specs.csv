@@ -1,0 +1,13 @@
+variable,group,model,transform,est_order,seasonal_order,full_order,k_params,logLik,AIC,BIC,HQIC,sigma2,ljung_box_p,selected_cv,selected_test
+us_real_gdp,gdp,Mean,dlog,"(0,0,0)",,"(0,1,0) on log-levels",2,441.334,-878.669,-872.743,,0.0001221,,True,False
+us_unemployment,us_unemployment,ARMA,diff,"(0,0,0)",,"(0,1,0)",1,-151.628,305.255,308.218,306.459,0.4881,0.9866,True,False
+us_cpi,us_cpi,Mean,none+diff,"(0,0,0)",,"(0,1,0)",2,-187.782,379.565,385.491,,0.8093,,True,False
+us_consumer_confidence,us_consumer_confidence,SARMA,diff,"(3,0,2)(0,0,1)[4]","(0,0,1)[4]","(3,1,2)(0,0,1)[4]",8,-87.003,190.006,213.709,199.637,0.1928,0.9587,True,False
+us_bond_yield_10y,us_bond_yield_10y,Mean,diff,"(0,0,0)",,"(0,1,0)",2,-89.763,183.526,189.452,,0.2055,,True,False
+us_credit,credit,ARMA,dlog+diff,"(0,0,2)",,"(0,2,2) on log-levels",3,549.541,-1093.082,-1084.214,-1089.478,2.542e-05,0.1678,True,False
+us_sp500_close,sp500,Mean,dlog,"(0,0,0)",,"(0,1,0) on log-levels",2,159.624,-315.247,-309.322,,0.00628,,True,False
+us_vix,vix,AR,none,"(4,0,0)",,"(4,0,0)",5,-456.723,925.446,943.096,932.618,39.91,0.866,True,False
+us_house_price_idx,us_house_price_idx,AR,dlog,"(1,0,0)",,"(1,1,0) on log-levels",2,511.102,-1016.205,-1007.337,-1012.601,4.377e-05,0.0499,True,False
+us_industrial_production,us_industrial_production,SARMA,dlog,"(1,0,0)",,"(1,1,0) on log-levels",3,406.085,-806.169,-797.281,-802.558,0.0001996,0.6338,True,False
+us_oil_price,oil,Mean,dlog,"(0,0,0)",,"(0,1,0) on log-levels",2,18.011,-32.022,-26.096,,0.04551,,True,False
+us_reer,reer,ARMA,dlog,"(0,0,0)",,"(0,1,0) on log-levels",1,288.666,-575.333,-572.489,-574.177,0.0006212,0.9037,True,False

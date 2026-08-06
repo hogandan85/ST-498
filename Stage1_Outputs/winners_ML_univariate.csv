@@ -1,0 +1,13 @@
+Family,Variable,Model,RMSE (full),MAE (primary),RMSE (primary),sMAPE,R2_oos,LB_p,DM stat,DM pval,Stable,Validated
+ML_univariate,us_credit_qoq_growth,XGBoost,0.6246,0.4935,0.6246,52.181,-0.7059,0.5217,-1.2673,0.205,Yes,No
+ML_univariate,us_sp500_log_ret,Ridge,0.0756,0.0623,0.0756,132.818,0.377,0.6046,1.3875,0.1653,Yes,No
+ML_univariate,us_vix_log_ret,SVR,0.2189,0.1796,0.2189,150.369,0.3771,0.3127,1.7662,0.0774,Yes,No
+ML_univariate,us_bond_yield_10y,LASSO,1.5064,1.4545,1.5064,45.58,0.476,0.8741,7.216,0.0,Yes,Yes
+ML_univariate,us_oil_yoy,Elastic Net,23.7958,19.8966,23.5219,152.039,0.7575,0.0654,6.1483,0.0,Yes,Yes
+ML_univariate,us_reer_diff,KRR,2.7898,2.3478,2.7898,193.592,0.4079,0.7323,1.8264,0.0678,Yes,No
+ML_univariate,us_gdp_yoy_growth,XGBoost,0.6356,0.3404,0.4052,12.979,0.786,0.3057,2.548,0.0108,Yes,Yes
+ML_univariate,us_cpi,KRR,2.7219,1.6827,2.7219,35.527,0.1971,0.0006,2.8459,0.0044,Yes,Yes
+ML_univariate,us_unemployment,Random Forest,0.3382,0.2804,0.3382,7.208,0.3509,0.0,2.7799,0.0054,Yes,Yes
+ML_univariate,us_consumer_confidence,XGBoost,0.6212,0.5204,0.6212,0.523,-0.0281,0.0339,-0.4426,0.6581,Yes,No
+ML_univariate,us_house_price_yoy,Ridge,2.7121,1.45,1.8698,91.333,0.6597,0.0625,3.4291,0.0006,Yes,Yes
+ML_univariate,us_indprod_yoy,Random Forest,2.0465,1.6659,1.8802,134.405,0.4912,0.5313,1.5574,0.1194,Yes,No

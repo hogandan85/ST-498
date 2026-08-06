@@ -1,0 +1,10 @@
+key,value
+notebook,03b_Stage2_ML
+target,us_delinquency_rate
+origin,2020 Q4
+train_n,117
+production_n,137
+features,us_credit_qoq_growth_L6 us_unemployment_L0 us_house_price_yoy_L3 us_gdp_yoy_growth_L2 us_consumer_confidence_L2 us_cpi_L0 us_indprod_yoy_L3 covid_dummy
+primary_model,OLS
+clean_window,2022-09-30 to 2025-12-31
+generated,2026-08-05 16:57

@@ -1,0 +1,89 @@
+variable,group,model,transform,est_order,seasonal_order,full_order,k_params,logLik,AIC,BIC,HQIC,sigma2,ljung_box_p,selected_cv,selected_test,RMSE_stationary
+us_house_price_idx,us_house_price_idx,Mean,dlog,"(0,0,0)",,"(0,1,0) on log-levels",2,357.175,-710.349,-704.791,,0.0001447,,False,False,0.008879
+us_house_price_idx,us_house_price_idx,AR,dlog,"(1,0,0)",,"(1,1,0) on log-levels",2,434.156,-862.313,-854.001,-858.938,3.73e-05,0.0582,True,False,0.008953
+us_house_price_idx,us_house_price_idx,ARMA,dlog,"(1,0,0)",,"(1,1,0) on log-levels",2,436.606,-869.213,-863.655,-866.956,3.758e-05,0.1814,False,True,0.008826
+us_house_price_idx,us_house_price_idx,SARMA,dlog,"(1,0,0)",,"(1,1,0) on log-levels",2,436.606,-869.213,-863.655,-866.956,3.758e-05,0.1814,False,False,0.008826
+us_consumer_confidence,us_consumer_confidence,Mean,diff,"(0,0,0)",,"(0,1,0)",2,-104.965,213.931,219.489,,0.3417,,False,True,0.369831
+us_consumer_confidence,us_consumer_confidence,AR,diff,"(4,0,0)",,"(4,1,0)",5,-18.502,49.004,65.474,55.689,0.08077,0.5309,False,False,0.389459
+us_consumer_confidence,us_consumer_confidence,ARMA,diff,"(0,0,2)",,"(0,1,2)",3,-24.218,54.435,62.773,57.821,0.08583,0.4374,False,False,0.370556
+us_consumer_confidence,us_consumer_confidence,SARMA,diff,"(0,0,2)(0,0,1)[4]","(0,0,1)[4]","(0,1,2)(0,0,1)[4]",4,-21.318,50.635,61.752,55.149,0.08156,0.6352,True,False,0.370556
+us_real_gdp,gdp,Mean,dlog,"(0,0,0)",,"(0,1,0) on log-levels",2,444.01,-884.019,-878.461,,3.363e-05,,True,False,0.004185
+us_real_gdp,gdp,AR,dlog,"(1,0,0)",,"(1,1,0) on log-levels",2,449.982,-893.964,-885.652,-890.589,2.853e-05,0.6125,False,False,0.00419
+us_real_gdp,gdp,ARMA,dlog,"(2,0,0)",,"(2,1,0) on log-levels",4,456.086,-904.173,-893.056,-899.659,2.735e-05,0.9344,False,True,0.004184
+us_real_gdp,gdp,SARMA,dlog,"(2,0,0)",,"(2,1,0) on log-levels",4,456.086,-904.173,-893.056,-899.659,2.735e-05,0.9344,False,False,0.004184
+us_gdp_yoy_growth,gdp,Mean,none+diff,"(0,0,0)",,"(0,1,0)",2,-140.645,285.29,290.848,,0.6224,,False,False,0.748246
+us_gdp_yoy_growth,gdp,AR,none+diff,"(4,0,0)",,"(4,1,0)",5,-113.99,239.979,256.449,246.664,0.4251,0.0255,False,False,0.790697
+us_gdp_yoy_growth,gdp,ARMA,none+diff,"(1,0,0)",,"(1,1,0)",2,-133.96,271.92,277.478,274.177,0.5558,0.0005,False,True,0.746833
+us_gdp_yoy_growth,gdp,SARMA,none+diff,"(1,0,0)(2,0,0)[4]","(2,0,0)[4]","(1,1,0)(2,0,0)[4]",4,-114.273,236.546,247.663,241.06,0.3931,0.7897,True,False,0.76171
+us_bond_yield_10y,us_bond_yield_10y,Mean,diff,"(0,0,0)",,"(0,1,0)",2,-74.8,153.6,159.158,,0.2058,,True,False,0.463187
+us_bond_yield_10y,us_bond_yield_10y,AR,diff,"(4,0,0)",,"(4,1,0)",5,-68.691,149.382,165.852,156.067,0.1934,0.6135,False,False,0.462167
+us_bond_yield_10y,us_bond_yield_10y,ARMA,diff,"(2,0,2)",,"(2,1,2)",5,-70.349,150.698,164.594,156.341,0.1879,0.5721,False,True,0.43338
+us_bond_yield_10y,us_bond_yield_10y,SARMA,diff,"(0,0,0)",,"(0,1,0)",1,-75.718,153.435,156.214,154.564,0.209,0.1285,False,False,0.438713
+us_bond_yield_1y,us_bond_yield_1y,Mean,diff,"(0,0,0)",,"(0,1,0)",2,-83.902,171.804,177.362,,0.2398,,False,False,0.69992
+us_bond_yield_1y,us_bond_yield_1y,AR,diff,"(4,0,0)",,"(4,1,0)",5,-70.492,152.983,169.453,159.668,0.1995,0.9865,False,False,0.693253
+us_bond_yield_1y,us_bond_yield_1y,ARMA,diff,"(0,0,3)",,"(0,1,3)",4,-73.394,154.787,165.904,159.301,0.2003,0.9675,True,True,0.681703
+us_bond_yield_1y,us_bond_yield_1y,SARMA,diff,"(3,0,0)",,"(3,1,0)",4,-74.087,156.175,167.291,160.689,0.2027,0.9,False,False,0.68734
+us_term_spread,us_term_spread,Mean,none,"(0,0,0)",,"(0,0,0)",2,-176.427,356.854,362.429,,1.108,,False,True,1.922217
+us_term_spread,us_term_spread,AR,none,"(4,0,0)",,"(4,0,0)",5,-41.547,95.094,111.615,101.801,0.1198,0.8107,False,False,2.008482
+us_term_spread,us_term_spread,ARMA,none,"(3,0,2)",,"(3,0,2)",7,-42.121,98.242,117.754,106.166,0.1146,0.6048,False,False,2.358466
+us_term_spread,us_term_spread,SARMA,none,"(2,0,2)(1,0,0)[4]","(1,0,0)[4]","(2,0,2)(1,0,0)[4]",7,-42.896,99.792,119.305,107.717,0.1168,0.7555,True,False,2.352757
+us_reer,reer,Mean,dlog,"(0,0,0)",,"(0,1,0) on log-levels",2,235.341,-466.681,-461.412,,0.0006066,,False,False,0.025643
+us_reer,reer,AR,dlog,"(1,0,0)",,"(1,1,0) on log-levels",2,233.258,-460.515,-452.64,-457.326,0.0006042,0.8824,False,True,0.025631
+us_reer,reer,ARMA,dlog,"(0,0,0)",,"(0,1,0) on log-levels",1,235.251,-468.503,-465.868,-467.436,0.0006077,0.8263,True,False,0.025756
+us_reer,reer,SARMA,dlog,"(0,0,0)",,"(0,1,0) on log-levels",1,235.251,-468.503,-465.868,-467.436,0.0006077,0.8263,False,False,0.025756
+us_reer_log_ret,reer,Mean,none,"(0,0,0)",,"(0,0,0)",2,235.341,-466.681,-461.412,,0.0006066,,False,False,0.025643
+us_reer_log_ret,reer,AR,none,"(1,0,0)",,"(1,0,0)",2,233.258,-460.515,-452.64,-457.326,0.0006042,0.8824,False,True,0.025631
+us_reer_log_ret,reer,ARMA,none,"(0,0,0)",,"(0,0,0)",1,235.251,-468.503,-465.868,-467.436,0.0006077,0.8263,True,False,0.025756
+us_reer_log_ret,reer,SARMA,none,"(0,0,0)",,"(0,0,0)",1,235.251,-468.503,-465.868,-467.436,0.0006077,0.8263,False,False,0.025756
+us_oil_price,oil,Mean,dlog,"(0,0,0)",,"(0,1,0) on log-levels",2,27.574,-51.148,-45.59,,0.03684,,True,False,0.155995
+us_oil_price,oil,AR,dlog,"(3,0,0)",,"(3,1,0) on log-levels",4,43.079,-76.158,-62.39,-70.569,0.02786,0.9436,False,False,0.15575
+us_oil_price,oil,ARMA,dlog,"(0,0,2)",,"(0,1,2) on log-levels",3,31.995,-57.99,-49.652,-54.604,0.03415,0.9226,False,True,0.154699
+us_oil_price,oil,SARMA,dlog,"(0,0,0)",,"(0,1,0) on log-levels",1,27.436,-52.872,-50.093,-51.743,0.03692,0.1343,False,False,0.154699
+us_oil_log_ret,oil,Mean,none,"(0,0,0)",,"(0,0,0)",2,28.22,-52.44,-46.865,,0.03658,,True,False,0.155883
+us_oil_log_ret,oil,AR,none,"(4,0,0)",,"(4,0,0)",5,43.1,-74.2,-57.678,-67.493,0.02785,0.9469,False,False,0.155735
+us_oil_log_ret,oil,ARMA,none,"(0,0,2)",,"(0,0,2)",3,32.603,-59.205,-50.843,-55.809,0.03396,0.919,False,True,0.154699
+us_oil_log_ret,oil,SARMA,none,"(2,0,0)",,"(2,0,0)",3,32.735,-59.47,-51.107,-56.074,0.03389,0.941,False,False,0.154729
+us_credit,credit,Mean,dlog+diff,"(0,0,0)",,"(0,2,0) on log-levels",2,449.937,-895.875,-890.333,,2.855e-05,,False,True,0.003712
+us_credit,credit,AR,dlog+diff,"(1,0,0)",,"(1,2,0) on log-levels",2,462.809,-919.617,-911.331,-916.253,2.146e-05,0.0029,False,False,0.003718
+us_credit,credit,ARMA,dlog+diff,"(1,0,0)",,"(1,2,0) on log-levels",2,466.782,-929.564,-924.022,-927.314,2.137e-05,0.0034,True,False,0.003722
+us_credit,credit,SARMA,dlog+diff,"(1,0,0)(2,0,2)[4]","(2,0,2)[4]","(1,2,0)(2,0,2)[4] on log-levels",6,479.113,-946.226,-929.602,-939.477,1.664e-05,0.3758,False,False,0.004297
+us_credit_qoq_growth,credit,Mean,none+diff,"(0,0,0)",,"(0,1,0)",2,-95.435,194.87,200.428,,0.2911,,False,True,0.372899
+us_credit_qoq_growth,credit,AR,none+diff,"(4,0,0)",,"(4,1,0)",5,-72.675,157.35,173.819,164.034,0.2072,0.0873,False,False,0.375273
+us_credit_qoq_growth,credit,ARMA,none+diff,"(1,0,0)",,"(1,1,0)",2,-78.756,161.511,167.069,163.768,0.2195,0.0035,False,False,0.374166
+us_credit_qoq_growth,credit,SARMA,none+diff,"(1,0,2)(2,0,1)[4]","(2,0,1)[4]","(1,1,2)(2,0,1)[4]",8,-65.077,146.153,168.386,155.181,0.1683,0.9529,True,False,0.408387
+us_credit_yoy_growth,credit,Mean,none+diff,"(0,0,0)",,"(0,1,0)",2,-127.724,259.449,265.007,,0.5009,,True,True,0.757696
+us_credit_yoy_growth,credit,AR,none+diff,"(4,0,0)",,"(4,1,0)",5,-79.697,171.394,187.863,178.078,0.2341,0.0002,False,False,0.783533
+us_credit_yoy_growth,credit,ARMA,none+diff,"(5,0,0)",,"(5,1,0)",6,-79.793,171.587,188.261,178.358,0.2196,0.1344,False,False,0.795981
+us_credit_yoy_growth,credit,SARMA,none+diff,"(1,0,0)(0,0,1)[4]","(0,0,1)[4]","(1,1,0)(0,0,1)[4]",3,-86.484,178.969,187.306,182.354,0.2347,0.0,False,False,0.783368
+us_industrial_production,us_industrial_production,Mean,dlog,"(0,0,0)",,"(0,1,0) on log-levels",2,341.333,-678.665,-673.107,,0.0001888,,False,False,0.008225
+us_industrial_production,us_industrial_production,AR,dlog,"(1,0,0)",,"(1,1,0) on log-levels",2,353.533,-701.066,-692.753,-697.691,0.0001463,0.5884,False,False,0.008194
+us_industrial_production,us_industrial_production,ARMA,dlog,"(2,0,0)",,"(2,1,0) on log-levels",4,358.074,-708.148,-697.032,-703.634,0.000142,0.7182,False,True,0.008166
+us_industrial_production,us_industrial_production,SARMA,dlog,"(2,0,0)(0,0,1)[4]","(0,0,1)[4]","(2,1,0)(0,0,1)[4] on log-levels",5,359.245,-708.49,-694.595,-702.848,0.0001392,0.9475,True,False,0.008228
+us_vix,vix,Mean,none,"(0,0,0)",,"(0,0,0)",2,-407.93,819.86,825.435,,52.51,,False,True,5.412197
+us_vix,vix,AR,none,"(4,0,0)",,"(4,0,0)",5,-366.034,744.068,760.59,750.775,32.24,0.913,True,False,5.489717
+us_vix,vix,ARMA,none,"(1,0,1)",,"(1,0,1)",4,-379.556,767.112,778.262,771.64,32.58,0.885,False,False,5.501384
+us_vix,vix,SARMA,none,"(1,0,1)",,"(1,0,1)",4,-379.556,767.112,778.262,771.64,32.58,0.885,False,False,5.501384
+us_vix_log_ret,vix,Mean,none,"(0,0,0)",,"(0,0,0)",2,-17.624,39.248,44.807,,0.07873,,True,False,0.229786
+us_vix_log_ret,vix,AR,none,"(2,0,0)",,"(2,0,0)",3,-3.354,14.709,25.757,19.194,0.06201,0.9402,False,True,0.229774
+us_vix_log_ret,vix,ARMA,none,"(0,0,1)",,"(0,0,1)",2,-5.464,14.927,20.485,17.184,0.06403,0.8801,False,False,0.229882
+us_vix_log_ret,vix,SARMA,none,"(0,0,1)",,"(0,0,1)",2,-5.464,14.927,20.485,17.184,0.06403,0.8801,False,False,0.229882
+us_delinquency_rate,us_delinquency_rate,Mean,diff,"(0,0,0)",,"(0,1,0)",2,13.626,-23.251,-17.761,,0.0462,,False,False,0.145705
+us_delinquency_rate,us_delinquency_rate,AR,diff,"(1,0,0)",,"(1,1,0)",2,31.31,-56.62,-48.411,-53.289,0.0338,0.1953,False,False,0.148281
+us_delinquency_rate,us_delinquency_rate,ARMA,diff,"(1,0,0)",,"(1,1,0)",2,31.115,-58.23,-52.741,-56.002,0.03399,0.1662,True,True,0.132511
+us_delinquency_rate,us_delinquency_rate,SARMA,diff,"(1,0,0)(2,0,1)[4]","(2,0,1)[4]","(1,1,0)(2,0,1)[4]",6,40.001,-68.003,-51.533,-61.318,0.02855,0.9222,False,False,0.147022
+us_cpi,us_cpi,Mean,none+diff,"(0,0,0)",,"(0,1,0)",2,-151.214,306.429,311.987,,0.7434,,True,False,0.909454
+us_cpi,us_cpi,AR,none+diff,"(4,0,0)",,"(4,1,0)",5,-123.987,259.974,276.444,266.659,0.5058,0.0028,False,True,0.905955
+us_cpi,us_cpi,ARMA,none+diff,"(4,0,0)",,"(4,1,0)",5,-130.043,270.086,283.981,275.728,0.5147,0.0032,False,False,0.913928
+us_cpi,us_cpi,SARMA,none+diff,"(0,0,0)(0,0,2)[4]","(0,0,2)[4]","(0,1,0)(0,0,2)[4]",3,-112.759,231.518,239.856,234.904,0.3699,0.7224,False,False,0.916713
+us_unemployment,us_unemployment,Mean,diff,"(0,0,0)",,"(0,1,0)",2,-29.288,62.576,68.134,,0.09579,,False,False,0.12902
+us_unemployment,us_unemployment,AR,diff,"(2,0,0)",,"(2,1,0)",3,-1.664,11.328,22.377,15.814,0.06024,0.1204,False,False,0.136148
+us_unemployment,us_unemployment,ARMA,diff,"(1,0,3)",,"(1,1,3)",5,1.512,6.976,20.872,12.619,0.05605,0.1662,True,True,0.125079
+us_unemployment,us_unemployment,SARMA,diff,"(2,0,0)(2,0,1)[4]","(2,0,1)[4]","(2,1,0)(2,0,1)[4]",6,7.43,-2.86,13.815,3.911,0.05055,0.9694,False,False,0.127086
+us_sp500_close,sp500,Mean,dlog,"(0,0,0)",,"(0,1,0) on log-levels",2,136.862,-269.723,-264.165,,0.005869,,True,False,0.075338
+us_sp500_close,sp500,AR,dlog,"(2,0,0)",,"(2,1,0) on log-levels",3,136.451,-264.902,-253.853,-260.416,0.005682,0.8941,False,True,0.075284
+us_sp500_close,sp500,ARMA,dlog,"(0,0,0)",,"(0,1,0) on log-levels",2,136.862,-269.723,-264.165,-267.466,0.005869,0.8869,False,False,0.075338
+us_sp500_close,sp500,SARMA,dlog,"(0,0,0)",,"(0,1,0) on log-levels",2,136.862,-269.723,-264.165,-267.466,0.005869,0.8869,False,False,0.075338
+us_sp500_log_ret,sp500,Mean,none,"(0,0,0)",,"(0,0,0)",2,138.23,-272.461,-266.886,,0.005848,,False,False,0.075363
+us_sp500_log_ret,sp500,AR,none,"(1,0,0)",,"(1,0,0)",2,136.908,-267.815,-259.478,-264.43,0.005864,0.8749,False,True,0.075337
+us_sp500_log_ret,sp500,ARMA,none,"(0,0,0)",,"(0,0,0)",2,138.23,-272.461,-266.886,-270.197,0.005848,0.8751,True,False,0.075363
+us_sp500_log_ret,sp500,SARMA,none,"(0,0,0)",,"(0,0,0)",2,138.23,-272.461,-266.886,-270.197,0.005848,0.8751,False,False,0.075363
