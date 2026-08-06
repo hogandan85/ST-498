@@ -1,0 +1,14 @@
+key,value
+notebook,03a_Stage2_TimeSeries
+target,us_delinquency_rate
+target_variant,"raw, COVID quarters masked rather than splined"
+protocol,"expanding-window refit, h=1, realised target at every origin"
+origin,rolling
+backtest_n,67
+holdout_n,14
+horizon,20
+models,Naive RW AR(1) SARIMA SARIMAX ARDL VAR
+regressors,us_house_price_yoy_L3 us_consumer_confidence_L2 us_unemployment_L0 us_credit_qoq_growth_L6 us_gdp_yoy_growth_L2 us_cpi_L6
+clean_window,2022-09-30 to 2025-12-31
+gap_adjacent_first_origin,True
+generated,2026-08-06 18:48
